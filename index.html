@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DigPoOff</title>
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <ul class="nav-bar">
+                <li class="nav-item new"><a href="/letters/new">new</a></li>
+                <li class="nav-item"><a href="/letters">all messages</a></li>
+                <li class="nav-item">
+                    <a href="#">message by ID</a>
+                    
+                    <ul class="id-list">
+                        <%letters.forEach(function (letter) { %>
+                            <li class="id-item"><a href="/letters/<%=letter.id%>">letter: <%=letter.id%></a></li>                        
+                        <%})%>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="nav-bottom-border"></div>
+        <div class="body-container">
+            <section class="mail-area"></section>
+        </div>
+    </div>
+</body>
+</html>

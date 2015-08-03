@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DigPoOff</title>
+    <link href='http://fonts.googleapis.com/css?family=Cedarville+Cursive' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <ul class="nav-bar">
+                <li class="nav-item new"><a href="/letters/new">new</a></li>
+                <li class="nav-item"><a href="/letters">all messages</a></li>
+                <li class="nav-item">
+                    <a href="#">message by ID</a>
+                    
+                    <ul class="id-list">
+                        <%letters.forEach(function (letter) { %>
+                            <li class="id-item"><a href="/letters/<%=letter.id%>">letter: <%=letter.id%></a></li>                        
+                        <%})%>
+                    </ul>
+
+                </li>
+            </ul>
+        </div>
+        <div class="nav-bottom-border"></div>
+        <div class="letter-area" style="background-image: url(<%=letter.giphyUrl%>)">
+            <section class="mail-area">                
+                <p class="letter-p">To: <%=letter.name%><br></p>
+                <address>
+                    <br>@@@@@@@@@@@@@@@@@@@@<br>
+                    address line 1: <%=letter.addressOne%><br>
+                    address line 2: <%=letter.addressTwo%><br>
+                    city/state/zip: <%=letter.city%>, <%=letter.state%> <%=letter.zip%><br>
+                    country: <%=letter.country%><br>
+                    @@@@@@@@@@@@@@@@@@@@<br>
+                </address>
+                <p class="letter-p">Message..................</p>
+                <p class="letter-p letterText"><%=letter.text%></p>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

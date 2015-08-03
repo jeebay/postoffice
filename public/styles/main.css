@@ -1,0 +1,151 @@
+body {
+	background-image: url("http://image.shutterstock.com/display_pic_with_logo/98341/120494371/stock-vector-seamless-vintage-mail-letters-and-envelope-illustration-background-pattern-in-vector-120494371.jpg");
+	font-family: helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	font-size: 1.25em;
+	color: #87751E;
+}
+
+a {
+	color: #87751E;
+	text-decoration: none;
+}
+.container {
+	position: relative;
+	margin: 0 auto;
+	padding: 0;
+	width: 480px;
+	height: 100%;
+	/*background-color: #FFFADF;*/
+
+}
+
+.nav-bar {
+	margin: 0 auto;
+	padding: 0;
+	height: 41px;
+	width: 100%;
+	position: relative;
+	background-color: #FFFADF;
+	z-index: 20;
+}
+
+.nav-item {
+	list-style: none;
+	float: left;
+}
+
+.id-list {
+	width: 100%;
+	padding: 0;
+	display: none;
+}
+
+.nav-item:hover > .id-list {
+	display: block;
+} 
+
+.id-item {
+	list-style: none;
+	background-color: rgba(255, 250, 223, .75);
+}
+
+.nav-item a {
+	display: block;
+	padding: 9px 20px;
+}
+
+.nav-item a:hover {
+	background-color: #BBAA55;
+	color: #FFFADF;
+}
+
+.nav-bottom-border {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 10px;
+}
+
+.body-container {
+	width: 480px;
+	height: 433px;
+	background-image: url("http://i.giphy.com/4shDCBDIxSPW8.gif");
+	background-size: cover;
+	position: relative;
+	/*z-index: ;*/
+}
+
+.mail-area {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(200,200,200,0.6);
+	/*padding: 10px;*/
+	z-index: 10;
+}
+
+.letter-area {
+	width: 480px;
+	height: 433px;
+	background-size: cover;
+	position: relative;
+	color: #AA3333;
+	/*z-index: ;*/
+}
+
+.form {
+	font-size: 1em;
+	width: 200px;
+	height: 25px;
+	margin: 10px 0px 0px 10px;
+	background-color: rgba(255,255,255,0.85);
+}
+
+.address-one, .address-two {
+	width: 300px;
+}
+
+.city, .state, .zip {
+	width: 120px;
+}
+
+.text {
+	font-family: helvetica, sans-serif;
+	font-size: 1.1em;
+	margin: 10px 0px 0px 10px;
+	background-color: rgba(255,255,255,0.85);
+}
+
+address {
+	padding: 10px 0px 20px 10px;
+	font-size: 15px;
+}
+
+.letter-p {
+	padding: 10px 0px 0px 10px;
+	margin: 0px;
+}
+
+.letterText {
+	font-family: 'Cedarville Cursive', cursive;
+	color: black;
+	font-size: 1.5em;
+	line-height: 20px;
+}
+
+.giphy-caption {
+	color: #65530C;
+	margin: 0px 0px 0px 10px;
+}
+
+.submit {
+	width: 60px;
+	height: 25px;
+	font-family: helvetica, sans-serif;
+	font-size: 1.1em;
+	margin: 10px 0px 0px 10px;
+}

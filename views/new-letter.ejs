@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DigiPoOff</title>
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <ul class="nav-bar">
+                <li class="nav-item new"><a href="/letters/new">new</a></li>
+                <li class="nav-item"><a href="/letters">all messages</a></li>
+                <li class="nav-item">
+                    <a href="#">message by ID</a>
+                    
+                    <ul class="id-list">
+                        <%letters.forEach(function (letter) { %>
+                            <li class="id-item"><a href="/letters/<%=letter.id%>">letter: <%=letter.id%></a></li>                        
+                        <%})%>
+                    </ul>
+
+                </li>
+            </ul>
+        </div>
+        <div class="nav-bottom-border"></div>
+        <div class="body-container">
+            <form action="/letters" method="POST" class="mail-area">
+                <input type="text" name="name" placeholder="recipient's name" class="form name"><br>
+                <input type="text" name="addressOne" placeholder="address line one" class="form address-one"><br>
+                <input type="text" name="addressTwo" placeholder="address line two" class="form address-two"><br>
+                <input type="text" name="city" placeholder="city" class="form city">
+                <input type="text" name="state" placeholder="state" class="form state">
+                <input type="text" name="zip" placeholder="zip" class="form zip"><br>
+                <input type="text" name="country" placeholder="country" class="form country"><br>
+                <textarea name="text" rows="4" cols="40" class="text" placeholder="enter message"></textarea>
+                <p class="giphy-caption">enter keywords for a random Giphy .gif!</p>
+                <input type="text" name="giphyWords" placeholder="keywords" class="form giphyUrl"><br>
+                <input type="submit" class="submit">
+
+            </form>
+        </div>
+    </div>
+</body>
+</html>
