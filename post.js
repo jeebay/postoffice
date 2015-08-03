@@ -30,12 +30,10 @@ app.get('/', function (req, res) {
 
 app.get('/letters', function (req, res) {
     var model = getModel();
-    console.log('-------------\n',model.letters);
     res.render('letters.ejs', {"letters":model.letters})
 });
 
 app.post('/letters', function (req, res) {
-    console.log(req.body);
     var model = getModel();
     var id = makeNewId(model.letters);
     var newLetter = {"id":id,"name":req.body.name,"addressOne":req.body.addressOne,"addressTwo":req.body.addressTwo,"city":req.body.city,"state":req.body.state,"zip":req.body.zip,"country":req.body.country,"text":req.body.text,"giphyWords":req.body.giphyWords};
@@ -53,8 +51,6 @@ app.post('/letters', function (req, res) {
         newLetter.giphyUrl = giphyUrl;
         model.letters.push(newLetter);
         
-        console.log('------------------');
-        console.log(model.letters);
         
         var updatedData = JSON.stringify(model);
         fs.writeFileSync('data.json', updatedData);
